@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="10" >
+    <title>Arbitrage Arashov Trading bot</title>
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+  <style>
+    body {
+      background: rgb(0, 7, 34);
+      background: linear-gradient(
+        42deg,
+        rgba(0, 7, 34, 1) 0%,
+        rgba(0, 3, 32, 1) 100%
+      );
+    }
+
+    .flexCard {
+      display: flex;
+      justify-content: space-around;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      display: inline;
+    }
+    .nav-wrapper {
+      background: rgb(0, 7, 34);
+      background: linear-gradient(
+        42deg,
+        rgba(0, 7, 34, 1) 0%,
+        rgba(0, 5, 52, 1) 100%
+      );
+    }
+
+    .page-footer {
+      background: rgb(0, 7, 34);
+      background: linear-gradient(
+        42deg,
+        rgba(0, 7, 34, 1) 0%,
+        rgba(0, 5, 52, 1) 100%
+      );
+    }
+    .card {
+      border-radius: 14px;
+      background: rgb(0, 36, 88);
+      background: linear-gradient(
+        42deg,
+        rgba(0, 36, 88, 1) 0%,
+        rgba(0, 5, 52, 1) 100%
+      );
+    }
+  </style>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <div class="container">
+          <a href="#" class="brand-logo">Arashov Arbitrage</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="https://t.me/ARASHOV_TRADING_ACADEMY">Telegram</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <% data.forEach((data)=> { %>
+
+        <div class="col s12 m6">
+          <div class="card indigo darken-3">
+            <div class="card-content white-text">
+              <span class="card-title center"><b><%=data.coin%></b></span>
+              <div class="flexCard">
+                <ul>
+                  <li>
+                    Exchange:
+                    <h6><%=data.min.exchange %></h6>
+                  </li>
+                  <li>
+                    Price:
+                    <h6><%=data.min.price %></h6>
+                  </li>
+                </ul>
+                <img
+                  class="center"
+                  src="https://img.icons8.com/external-basicons-line-edtgraphics/50/FFFFFF/external-Arrow-arrows-basicons-line-edtgraphics-33.png"
+                />
+                <ul>
+                  <li>
+                    Exchange:
+                    <h6><%=data.max.exchange %></h6>
+                  </li>
+                  <li>
+                    Price:
+                    <h6><%=data.max.price %></h6>
+                  </li>
+                </ul>
+              </div>
+              <span class="card-title center"><b>profit: <%=data.percent%>%</b></span>
+            </div>
+          </div>
+        </div>
+        <%})%>
+      </div>
+    </div>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="footer-copyright">
+          <div class="container">
+            © 2023 Copyright Arashov
+            <a
+              class="grey-text text-lighten-4 right"
+              href="https://t.me/Nodejs5"
+              >Developer: @Nodejs5</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
