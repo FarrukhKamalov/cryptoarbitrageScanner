@@ -26,7 +26,7 @@ const getdata = async() => {
         //  okx: await getOkexTicker()
      }, 2);
 
-    console.log(arbitrage)
+    // console.log(arbitrage)
 
      return arbitrage
 }
