@@ -1,7 +1,7 @@
 const { getAllExchanges, compare } = require("./src/helpers");
 const { getBtcTurkTicker, getGateTicker, getBinanceTicker, getKucoinTicker, getHuobiTicker, getOkexTicker } = require("./src/exchange");
 const express = require("express");
-
+require('dotenv')
 const app = express();
 
 
@@ -42,7 +42,7 @@ app.get("/", async (req, res) => {
 })
 
 
-
-app.listen(5000, () => {
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => {
     console.log(5000);
 })
